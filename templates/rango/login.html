@@ -9,6 +9,10 @@
 		
 		<form id="login_form" method="post" action="/rango/login/">
 			{% csrf_token %}
+			
+			{% if not user %}
+			<p>Your username or password didn't match. Please try again</p>
+			{% endif %}
 			Username: <input type="text" name="username" value="" size="50" />
 			<br />
 			Password: <input type="password" name="password" value="" size="50" />
