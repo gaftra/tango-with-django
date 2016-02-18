@@ -165,7 +165,13 @@ def user_login(request):
 		return render(request, 'rango/login.html', {})
 		
 def about(request):
-	context_dict = {'':''}
+
+	if request.session.get('visits'):
+		count = request.session.get('visits')
+	else:
+		count = 0
+		
+	context_dict = {'visits':count}
 	return render(request, 'rango/about.html', context_dict)
 	
 @login_required

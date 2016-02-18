@@ -60,7 +60,7 @@ ROOT_URLCONF = 'tangowithdjango.urls'
 
 WSGI_APPLICATION = 'tangowithdjango.wsgi.application'
 
-SESSION_EXPIRE_AT_BROWSER_CLASE = True
+SESSION_EXPIRE_AT_BROWSER_CLOSE = True
 
 
 # Database
